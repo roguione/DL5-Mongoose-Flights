@@ -20,8 +20,9 @@ FYI, future lessons will expand upon the `mongoose-movies` project, and the labs
 1. Refer to the **_Express Routers and Controllers_** lesson as necessary on how to use Express Generator to set up a new Express project named **mongoose-flights**.
 
     > Hint: Don't forget the `-e` option to ensure that EJS templating is configured.
+	> Hint: If you would want all of the express-generator files at the root of this repo run `express -ef .` from the repo root.
 
-2. Be sure to install the Node modules after you `cd` into the project.
+2. Be sure to install the Node modules - `npm i``.
 
 3. Rename **app.js** to **server.js** and make the necessary change inside of `bin/www`.
 
