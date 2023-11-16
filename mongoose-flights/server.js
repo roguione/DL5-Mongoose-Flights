@@ -48,7 +48,7 @@ require('./config/database');
 // Start the Express server
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+  console.log(`running on port ${port}`);
 });
 
 module.exports = app;

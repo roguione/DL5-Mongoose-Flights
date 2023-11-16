@@ -2,7 +2,7 @@ const Flight = require('../models/flight');
 
 // Display the "Add New Flight" form
 exports.showAddFlightForm = (req, res) => {
-  res.render('flights/new');
+  res.render('views/flights/new');
 };
 
 // Handle the form submission to add a new flight
