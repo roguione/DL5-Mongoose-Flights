@@ -1,0 +1,41 @@
+<!-- views/new.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add New Flight</title>
+</head>
+<body>
+  <%- include('partials/header') %>
+  <h2>Add New Flight</h2>
+  <form action="/flights" method="POST">
+    <!-- Add form fields here -->
+    <label for="airline">Airline:</label>
+    <select name="airline">
+      <option value="American">American</option>
+      <option value="Delta">Delta</option>
+      <option value="United">United</option>
+    </select>
+
+    <label for="airport">Airport:</label>
+    <select name="airport">
+      <option value="LIT">LIT</option>
+      <option value="DUH">DUH</option>
+      <option value="FUC">FUC</option>
+      <option value="UUP">FUC</option>
+      <option value="MAN">FUC</option>
+      <!-- Add other airport options if needed -->
+    </select>
+
+    <label for="flightNo">Flight Number:</label>
+    <input type="number" name="flightNo" min="10" max="9999" required>
+
+    <label for="departs">Departure Date/Time:</label>
+    <input type="datetime-local" name="departs" required>
+
+    <!-- Add other form fields as needed -->
+
+    <input type="submit" value="Add Flight">
+  </form>
+  <%- include('partials/footer') %>
+</body>
+</html>

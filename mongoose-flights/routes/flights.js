@@ -1,18 +1,13 @@
-
-
+// routes/flights.js
 const express = require('express');
 const router = express.Router();
-const Flight = require('../models/flight'); // Import the Flight Model
+const flightListController = require('../controllers/flightListController'); // Import the flightList controller
+const addFlightController = require('../controllers/flightsController'); // Import the addFlight controller
 
 // Route to display flights
-router.get('/flights', async (req, res) => {
-  try {
-    const flights = await Flight.find();
-    res.render('flights/index', { flights }); // Pass flights to your view
-  } catch (error) {
-    console.error(error);
-    res.status(500).send('Error fetching flights');
-  }
-});
+router.get('/flights', flightListController.flightList);
+
+// Route to handle the form submission and add a new flight
+router.post('/flights', addFlightController.addFlight);
 
 module.exports = router;

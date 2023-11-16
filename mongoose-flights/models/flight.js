@@ -1,4 +1,4 @@
-
+// models/flights.js
 
 const mongoose = require('mongoose');
 
